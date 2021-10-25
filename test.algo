@@ -1,0 +1,20 @@
+ALGORITHM calcul
+VAR
+    c : CHAR,
+    nb_c, nb_v,nb_mots : INTEGER:=0
+BEGIN
+    
+    REPEAT
+        write("give me a char")
+        read (c)
+        nb_c = nb_c +1
+        IF (c in ["i,o,u,y,o"]) THEN
+            nb_v = nb_v +1
+        END_IF
+        IF (c = " ") THEN
+            nb_mots = nb_mots +1
+        END_IF
+    UNTIL (c = ".")
+
+    write("nombre de mots ", nb_mots, "nombre de voyelles",nb_v, "nombre de caracteres",nb_c)
+END
